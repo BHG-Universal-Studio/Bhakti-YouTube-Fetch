@@ -172,7 +172,7 @@ def fetch_videos_from_channel(channel_id):
 
         if title_el is None or video_id_el is None or published_el is None:
 
-            continue
+        continue
 
 
 
