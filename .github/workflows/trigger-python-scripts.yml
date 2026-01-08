@@ -33,7 +33,7 @@ jobs:
           python Full-Videos-Fetch.py
 
 
-      - name: 🚀 Run Full Videos Fetch
+      - name: 🚀 Run Short Videos Fetch
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
