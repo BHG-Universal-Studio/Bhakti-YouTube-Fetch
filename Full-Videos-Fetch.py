@@ -26,6 +26,8 @@ EXCLUDED_KEYWORDS = [
     "concert",
     "live", 
     "lyrical",
+    "song",
+    "extended",
 ]
 
 COLLECTION_NAME = "Listen_Kirtans_Videos_New"
