@@ -172,7 +172,7 @@ def fetch_videos_from_channel(channel_id):
 
         if title_el is None or video_id_el is None or published_el is None:
 
-        continue
+            continue
 
 
 
@@ -481,49 +481,30 @@ duration_map = fetch_durations_batch(vod_candidate_ids)
 print("\n🚀 Starting Firebase Insertion...")
 
 for v in vod_candidates:
-
     vid = v["video_id"]
-
     duration = duration_map.get(vid, 0)
 
-
-
- # Duration Check (Shorts only)
-if duration >= MAX_DURATION_SECONDS:
-    print(f"⏭️ Skipped long ({duration}s): {vid}")
-    total_skipped_short += 1
-    continue
-
-
-
+    # Duration Check (Shorts only)
+    if duration >= MAX_DURATION_SECONDS:
+        print(f"⏭️ Skipped long ({duration}s): {vid}")
+        total_skipped_short += 1
+        continue
 
     # Insert to Firebase
-
     db.collection(COLLECTION_NAME).document().set({
-
         "title": v["title"],
-
         "url": v["url"],
-
         "imageUrl": v["imageUrl"],
-
         "timestamp": str(int(time.time() * 1000)),
-
     })
 
-
-
     existing_ids.add(vid)
-
     new_ids_added.append(vid)
-
     total_inserted += 1
 
-
-
     print(f"➕ Inserted ({duration}s): {vid} - {v['title'][:30]}...")
-
     time.sleep(0.03)
+
 
 
 
@@ -553,7 +534,7 @@ print(f"⏭️  Skipped (Existing)  : {total_skipped_existing}")
 
 print(f"🚫 Skipped (Live/Upc)  : {total_skipped_live}")
 
-print(f"Too Short (<{MIN_DURATION_SECONDS}s)      : {total_skipped_short}")
+print(f"⏱️ Skipped long (≥{MAX_DURATION_SECONDS}s) : {total_skipped_short}")
 
 print(f"➕ Videos Inserted     : {total_inserted}")
 
