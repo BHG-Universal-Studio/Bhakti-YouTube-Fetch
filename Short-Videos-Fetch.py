@@ -33,7 +33,18 @@ CHANNEL_IDS = [
     "UCvxdsxpfAq9CkFoy30j3grg",
     "UCw5AhdH8bahVNTW816SZadA",
     "UC76Xm8-eR1U4lVFHyjdb_pg",
-    "UCX6GCKSPInSiwh9xx-MWQQg"
+    "UCX6GCKSPInSiwh9xx-MWQQg",
+    "UCe0eAPrIA5MW25c6snNWp6A",
+    "UCH-AC0M1wvr3hS4Wgniy97Q",
+    "UCAHQ_pLHKvKIaRkEc1yuHqQ",
+    "UCrvzIFLglZYw5EWCCkB2y2w",
+    "UCGuPTCIvifDRiIYrjEyDbMA",
+    "UCjFR8TGBtdzIzdjP1-DLsUw",
+    "UC7Qy0AHr8IIw_wjAp5qov8A",
+    "UCmmYiJzdrzNYOpZT5L8wKNQ",
+    "UC7qgD3Orz-UTOCWpYc-LVmA",
+    "UCNW_cjEisN6S5tX7gwdBeYA",
+
 
 ]
 
