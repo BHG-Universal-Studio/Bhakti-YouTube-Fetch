@@ -28,6 +28,7 @@ EXCLUDED_KEYWORDS = [
     "lyrical",
     "song",
     "extended",
+    "punjabi",
 ]
 
 COLLECTION_NAME = "Listen_Kirtans_Videos_New"
